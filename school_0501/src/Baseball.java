@@ -1,3 +1,5 @@
+package school_0501.src;
+
 abstract class Ability{
   abstract boolean hitting();
 }
@@ -26,6 +28,5 @@ public class Baseball {
    else System.out.println("Out");
    if(KimHS.hitting()) System.out.println("hit");
    else System.out.println("Out");
-
   }
 }

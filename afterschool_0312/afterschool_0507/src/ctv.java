@@ -5,6 +5,7 @@ class Tv{
   Tv(){
     power = false;
     channel = 0;
+
   }
 
   void power(){
