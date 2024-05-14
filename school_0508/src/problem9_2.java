@@ -1,5 +1,6 @@
 import java.util.*;
 
+import java.util.*;
 
 class Circle implements Cloneable {
   Point2 p;  // 원점
@@ -20,14 +21,17 @@ class Circle implements Cloneable {
     return (Circle)obj;
   }
 
-  public Circle deepCopy(){
+  public Circle deepCopy() { // 깊은 복사
     Object obj = null;
+
     try {
       obj = super.clone();
-    } catch(CloneNotSupportedException e) {}
-    Circle circle = (Circle) obj;
-    circle.p = new Point2(p.x, p.y);
-    return circle;
+    } catch (CloneNotSupportedException e) {}
+
+    Circle c = (Circle)obj;
+    c.p = new Point2(this.p.x, this.p.y);
+
+    return c;
   }
 
   public String toString() {
